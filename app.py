@@ -21,31 +21,34 @@ def car_models():
 
 def correct_data(user_data, X, y):
 
-    keys = ['Series', 'Model', 'Year', 'Kilometer', 'Engine Volume', 'Engine Power', 'Fuel Tank',
-            'Paint-changed', 'Brand_Alfa Romeo', 'Brand_Anadol', 'Brand_Askam', 'Brand_Aston Martin',
-            'Brand_Audi', 'Brand_BMC', 'Brand_BMW', 'Brand_Bentley', 'Brand_Buick', 'Brand_Cadillac', 'Brand_Chery',
-            'Brand_Chevrolet', 'Brand_Chrysler', 'Brand_Citroen', 'Brand_Cupra', 'Brand_DFM', 'Brand_DS Automobiles',
-            'Brand_Dacia', 'Brand_Daewoo', 'Brand_Daihatsu', 'Brand_Dodge', 'Brand_Ferrari', 'Brand_Fiat', 'Brand_Ford',
-            'Brand_GAZ', 'Brand_Geely', 'Brand_HF Kanuni', 'Brand_Honda', 'Brand_Hyundai', 'Brand_Ikco',
-            'Brand_Infiniti', 'Brand_Iveco - Otoyol', 'Brand_Jaguar', 'Brand_Joyce', 'Brand_Kia', 'Brand_Lada',
-            'Brand_Lamborghini', 'Brand_Lancia', 'Brand_Lexus', 'Brand_Lincoln', 'Brand_MG', 'Brand_MINI',
+    keys = ['Series', 'Model', 'Year', 'Kilometer', 'Engine Volume', 'Engine Power', 'Fuel Tank', 'Paint-changed',
+            'Brand_Alfa Romeo', 'Brand_Anadol', 'Brand_Askam', 'Brand_Aston Martin', 'Brand_Audi', 'Brand_BMC',
+            'Brand_BMW', 'Brand_Bentley', 'Brand_Buick', 'Brand_Cadillac', 'Brand_Chery', 'Brand_Chevrolet',
+            'Brand_Chrysler', 'Brand_Citroen', 'Brand_Cupra', 'Brand_DFM', 'Brand_DS Automobiles', 'Brand_Dacia',
+            'Brand_Daewoo', 'Brand_Daihatsu', 'Brand_Dodge', 'Brand_Ferrari', 'Brand_Fiat', 'Brand_Ford',
+            'Brand_GAZ', 'Brand_GMC', 'Brand_Geely', 'Brand_HF Kanuni', 'Brand_Honda', 'Brand_Hongqi', 'Brand_Hummer',
+            'Brand_Hyundai', 'Brand_Ikco', 'Brand_Infiniti', 'Brand_Isuzu', 'Brand_Iveco - Otoyol', 'Brand_Jaguar',
+            'Brand_Jeep', 'Brand_Joyce', 'Brand_Kia', 'Brand_Lada', 'Brand_Lamborghini', 'Brand_Lancia',
+            'Brand_Land Rover', 'Brand_Lexus', 'Brand_Lincoln', 'Brand_MG', 'Brand_MINI', 'Brand_Mahindra',
             'Brand_Maserati', 'Brand_Mazda', 'Brand_Mercedes - Benz', 'Brand_Mitsubishi', 'Brand_Moskvitch',
             'Brand_Nissan', 'Brand_Opel', 'Brand_Peugeot', 'Brand_Pontiac', 'Brand_Porsche', 'Brand_Proton',
-            'Brand_RKS', 'Brand_Regal Raptor', 'Brand_Renault', 'Brand_Rover', 'Brand_Saab', 'Brand_Seat',
-            'Brand_Skoda', 'Brand_Smart', 'Brand_Subaru', 'Brand_Suzuki', 'Brand_Tata', 'Brand_Temsa', 'Brand_Tesla',
-            'Brand_Tofaş', 'Brand_Toyota', 'Brand_Volkswagen', 'Brand_Volta', 'Brand_Volvo', 'Gear Type_Düz',
-            'Gear Type_Otomatik', 'Gear Type_Yarı Otomatik', 'Fuel Type_Benzin', 'Fuel Type_Dizel',
-            'Fuel Type_Elektrik', 'Fuel Type_Hibrit', 'Fuel Type_LPG & Benzin', 'Color_-', 'Color_Altın', 'Color_Bej',
-            'Color_Beyaz', 'Color_Bordo', 'Color_Diğer', 'Color_Füme', 'Color_Gri', 'Color_Gri (Gümüş)',
-            'Color_Gri (metalik)', 'Color_Gri (titanyum)', 'Color_Kahverengi', 'Color_Kırmızı', 'Color_Lacivert',
-            'Color_Mavi', 'Color_Mavi (metalik)', 'Color_Mor', 'Color_Pembe', 'Color_Sarı', 'Color_Siyah',
-            'Color_Turkuaz', 'Color_Turuncu', 'Color_Yeşil', 'Color_Yeşil (metalik)', 'Color_Şampanya', 'Body Type_-',
-            'Body Type_Cabrio', 'Body Type_Camlı Van', 'Body Type_Coupe', 'Body Type_Frigorifik Panelvan',
-            'Body Type_Hatchback/3', 'Body Type_Hatchback/5', 'Body Type_MPV', 'Body Type_Minibüs',
-            'Body Type_Panel Van', 'Body Type_Pick-up', 'Body Type_Roadster', 'Body Type_SUV', 'Body Type_Sedan',
-            'Body Type_Station wagon', 'Body Type_Yarım Camlı Van', 'Drive_-', 'Drive_4WD (Sürekli)',
-            'Drive_4x2 (Arkadan İtişli)', 'Drive_4x2 (Önden Çekişli)', 'Drive_4x4', 'Drive_AWD (Elektronik)',
-            'Drive_Arkadan İtiş', 'Drive_Önden Çekiş']
+            'Brand_RKS', 'Brand_Regal Raptor', 'Brand_Renault', 'Brand_Rolls-Royce', 'Brand_Rover', 'Brand_SWM',
+            'Brand_Saab', 'Brand_Seat', 'Brand_Seres', 'Brand_Skoda', 'Brand_Skywell', 'Brand_Smart', 'Brand_Ssangyong',
+            'Brand_Subaru', 'Brand_Suzuki', 'Brand_TOGG', 'Brand_Tata', 'Brand_Temsa', 'Brand_Tesla', 'Brand_Tofaş',
+            'Brand_Toyota', 'Brand_Volkswagen', 'Brand_Volta', 'Brand_Volvo', 'Gear Type_Düz', 'Gear Type_Otomatik',
+            'Gear Type_Yarı Otomatik', 'Fuel Type_Benzin', 'Fuel Type_Dizel', 'Fuel Type_Elektrik', 'Fuel Type_Hibrit',
+            'Fuel Type_LPG & Benzin', 'Color_-', 'Color_Altın', 'Color_Bej', 'Color_Beyaz', 'Color_Bordo',
+            'Color_Diğer', 'Color_Füme', 'Color_Gri', 'Color_Gri (Gümüş)', 'Color_Gri (metalik)', 'Color_Gri (titanyum)',
+            'Color_Kahverengi', 'Color_Kırmızı', 'Color_Lacivert', 'Color_Mavi', 'Color_Mavi (metalik)',
+            'Color_Mor', 'Color_Pembe', 'Color_Sarı', 'Color_Siyah', 'Color_Turkuaz', 'Color_Turuncu', 'Color_Yeşil',
+            'Color_Yeşil (metalik)', 'Color_Şampanya', 'Body Type_-', 'Body Type_Cabrio', 'Body Type_Camlı Van',
+            'Body Type_Coupe', 'Body Type_Crossover', 'Body Type_Frigorifik Panelvan', 'Body Type_Hard top',
+            'Body Type_Hatchback/3', 'Body Type_Hatchback/5', 'Body Type_Kamyonet', 'Body Type_MPV',
+            'Body Type_Minibüs', 'Body Type_Panel Van', 'Body Type_Pick-Up', 'Body Type_Pick-up',
+            'Body Type_Roadster', 'Body Type_SUV', 'Body Type_Sedan', 'Body Type_Station wagon',
+            'Body Type_Yarım Camlı Van', 'Drive_-', 'Drive_4WD (Sürekli)', 'Drive_4x2 (Arkadan İtişli)',
+            'Drive_4x2 (Önden Çekişli)', 'Drive_4x4', 'Drive_AWD (Elektronik)', 'Drive_Arkadan İtiş',
+            'Drive_Önden Çekiş']
 
     data = [0] * len(keys)
 
@@ -79,13 +82,15 @@ except Exception as e:
 car_info, X, y = car_models()
 car_brands = sorted(car_info.keys())
 gear_type_info = sorted(['Düz', 'Otomatik', 'Yarı Otomatik'])
-color_info = sorted(['Altın', 'Bej', 'Beyaz', 'Bordo', 'Diğer', 'Füme', 'Gri', 'Gri (Gümüş)', 'Gri (metalik)',
-                     'Gri (titanyum)', 'Kahverengi', 'Kırmızı', 'Lacivert', 'Mavi', 'Mavi (metalik)', 'Mor', 'Pembe',
-                     'Sarı', 'Siyah', 'Turkuaz', 'Turuncu', 'Yeşil', 'Yeşil (metalik)', 'Şampanya'])
+color_info = sorted(['Beyaz', 'Gri (Gümüş)', 'Mavi (metalik)', 'Mavi', 'Gri', 'Kırmızı', 'Füme', 'Yeşil', 'Siyah',
+                     'Bej', 'Gri (metalik)', 'Yeşil (metalik)', 'Turkuaz', 'Gri (titanyum)', 'Sarı', 'Turuncu',
+                     'Kahverengi', 'Lacivert', 'Bordo', 'Diğer', 'Şampanya', 'Mor', 'Altın', 'Pembe'])
+
 fuel_type_info = sorted(['Benzin', 'Dizel', 'Elektrik', 'Hibrit', 'LPG & Benzin'])
-body_type_info = sorted(['Cabrio', 'Camlı Van', 'Coupe', 'Frigorifik Panelvan', 'Hatchback/3', 'Hatchback/5',
-                         'MPV', 'Minibüs', 'Panel Van', 'Pick-up', 'Roadster', 'SUV', 'Sedan', 'Station wagon',
-                         'Yarım Camlı Van'])
+body_type_info = sorted(['Sedan', 'Camlı Van', 'Crossover', 'Frigorifik Panelvan', 'Hatchback/5', 'Panel Van',
+                         'Station wagon', 'Coupe', 'MPV', 'Hatchback/3', 'Minibüs', 'Hard top', 'SUV',
+                         'Yarım Camlı Van', 'Cabrio', 'Pick-Up', 'Roadster', 'Kamyonet'])
+
 drive_info = sorted(['4WD (Sürekli)', '4x2 (Arkadan İtişli)', '4x2 (Önden Çekişli)', '4x4', 'AWD (Elektronik)',
                      'Arkadan İtiş', 'Önden Çekiş'])
 
